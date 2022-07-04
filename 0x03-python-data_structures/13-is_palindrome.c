@@ -28,3 +28,4 @@ int check_pal(listint_t **head, listint_t *last)
 		return (1);
 	}
 	return (0);
+}
