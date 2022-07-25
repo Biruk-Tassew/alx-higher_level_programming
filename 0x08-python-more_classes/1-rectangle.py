@@ -1,46 +1,40 @@
 #!/usr/bin/python3
-""" Class Rectangle """
+"""
+Defines a class Rectangle
+"""
 
 
 class Rectangle:
-    """ Class that defines a rectangle """
+    """Representation of a rectangle"""
     def __init__(self, width=0, height=0):
-        """
-        Method that defines instances of a new rectangle
-        Args:
-            width: x number of elements.
-            height:y number of elements.
-        Raises:
-            TypeError: data not an int
-            ValueError: data below zero
-        """
+        """Initializes the rectangle"""
         self.height = height
         self.width = width
 
-        @property
-        def width(self):
-            """ Getter for width """
-            return self.__width
+    @property
+    def width(self):
+        """getter for the private instance attribute width"""
+        return self.__width
 
-        @width.setter
-        def width(self, width):
-            """ Setter for width """
-            if type(width) is not int:
-                raise TypeError("width must be an integer")
-            if width < 0:
-                raise ValueError("width must be >= 0")
-            self.__width = width
+    @width.setter
+    def width(self, value):
+        """setter for the private instance attribute width"""
+        if type(value) is not int:
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
 
-        @property
-        def height(self):
-            """ Getter for height """
-            return self.__height
+    @property
+    def height(self):
+        """getter for the private instance attribute height"""
+        return self.__height
 
-        @height.setter
-        def height(self, height):
-            """ Setter for height """
-            if type(height) is not int:
-                raise TypeError("height must be an integer")
-            if height < 0:
-                raise ValueError("height must be >= 0")
-            self.__height = height
+    @height.setter
+    def height(self, value):
+        """setter for the private instance attribute height"""
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
