@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the "to_json_string" fundtion
+This file contains the "to_json_string" fundtion
 """
 
 import json
