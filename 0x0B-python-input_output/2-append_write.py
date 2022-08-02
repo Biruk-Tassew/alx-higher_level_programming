@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Contains the function "append_wrtie"
+This file contains the function "append_wrtie"
 """
 
 
