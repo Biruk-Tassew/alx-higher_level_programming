@@ -9,16 +9,16 @@ import turtle
 
 
 class Base:
-    """The base class"""
+    """A base class"""
     __nb_objects = 0
-    
+
     def __init__(self, id=None):
-        """Init the class"""
-        if id:
-            self.id = id
-        else:
-            self.__nb_objects += 1
+        """Initialize the base class"""
+        if id is None:
+            Base.__nb_objects += 1
             self.id = self.__nb_objects
+        else:
+            self.id = id
 
     @staticmethod
     def to_json_string(list_dictionaries):

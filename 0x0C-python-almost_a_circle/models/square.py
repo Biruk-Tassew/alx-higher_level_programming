@@ -7,7 +7,7 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """A square"""
+    """A representation of a square"""
     def __init__(self, size, x=0, y=0, id=None):
         """initializes the square"""
         super().__init__(size, size, x, y, id)
@@ -15,12 +15,12 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        """size getter"""
+        """getter for size"""
         return self.width
 
     @size.setter
     def size(self, value):
-        """size setter"""
+        """setter for size"""
         self.width = value
         self.height = value
 
@@ -52,10 +52,10 @@ class Square(Rectangle):
                 self.y = kwargs["y"]
 
     def to_dictionary(self):
-        """dictionary representation of the Square"""
-        dict_ = {}
-        dict_["id"] = self.id
-        dict_["size"] = self.size
-        dict_["x"] = self.x
-        dict_["y"] = self.y
-        return dict_
+        """dictionary representation of a Square"""
+        d = {}
+        d["id"] = self.id
+        d["size"] = self.size
+        d["x"] = self.x
+        d["y"] = self.y
+        return d

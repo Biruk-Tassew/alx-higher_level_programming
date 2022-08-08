@@ -7,7 +7,7 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """A rectangle"""
+    """A representation of a rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initializes the rectangle"""
         self.width = width
@@ -15,30 +15,30 @@ class Rectangle(Base):
         self.x = x
         self.y = y
         super().__init__(id)
-    
+
     @property
     def width(self):
-        """width getter"""
+        """getter od width"""
         return self.__width
 
     @property
     def height(self):
-        """height getter"""
+        """getter of height"""
         return self.__height
 
     @property
     def x(self):
-        """x getter"""
+        """getter of x"""
         return self.__x
 
     @property
     def y(self):
-        """y getter"""
+        """getter of y"""
         return self.__y
 
     @width.setter
     def width(self, value):
-        """width setter"""
+        """setter of width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -47,7 +47,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """height setter"""
+        """setter of height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -56,7 +56,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """x setter"""
+        """setter of x"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -65,7 +65,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """y setter"""
+        """setter of y"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -77,7 +77,7 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
-        """print the cordinates of the rectangle"""
+        """print a display of the rectangle"""
         print(("\n" * self.__y) +
               "\n".join(((" " * self.__x) + ("#" * self.__width))
                         for i in range(self.__height)))
@@ -118,10 +118,10 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """dictionary representation of a Rectangle"""
-        dict_ = {}
-        dict_["id"] = self.id
-        dict_["width"] = self.width
-        dict_["height"] = self.height
-        dict_["x"] = self.x
-        dict_["y"] = self.y
-        return dict_
+        d = {}
+        d["id"] = self.id
+        d["width"] = self.width
+        d["height"] = self.height
+        d["x"] = self.x
+        d["y"] = self.y
+        return d
