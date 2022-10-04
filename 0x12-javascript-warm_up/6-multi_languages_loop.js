@@ -1,5 +1,7 @@
 #!/usr/bin/node
-const args = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
-for (const arg in args) {
-  console.log(args[arg]);
+// Uses an array to loop through and print strings
+
+const langs = ['C is fun', 'Python is cool', 'Javascript is amazing'];
+for (let i = 0; i < langs.length; i++) {
+  console.log(langs[i]);
 }
